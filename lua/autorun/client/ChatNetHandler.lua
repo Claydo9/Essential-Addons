@@ -1,0 +1,6 @@
+net.Receive( "Network", function( len, ply ) 
+	local inflictor = net.ReadString()
+	local affected = net.ReadString()
+	local msg = net.ReadString()
+	chat.AddText( net.ReadColor(), "[SERVER]: ", Color( 0, 255, 0 ), inflictor, Color(255, 255, 255), msg , Color(0, 0, 255), affected )
+end)
